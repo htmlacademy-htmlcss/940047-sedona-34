@@ -8,7 +8,7 @@
     <header class="page-header">
         <nav class="page-navigation">
             <a class="navigation-logo" href="index.html">
-                <img class="page-header-logo" alt="Логотип" src="#">
+                <img class="page-header-logo" src="images/logo.png" width="139" height="70" alt="Логотип">
             </a>
             <ul class="navigation-list">
                 <li class="navigation-item">
@@ -24,6 +24,7 @@
             <ul class="navigation-list navigation-user">
                 <li class="navigation-item">
                     <a class="navigation-link" href="#">
+                        <img class="navigation-item-icon" src="images/loupe.svg" width="42" height="66" alt="Поиск">
                         <span class="visually-hidden">
                         Поиск
                     </span>
@@ -31,6 +32,7 @@
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link" href="#">
+                        <img class="navigation-item-icon" src="images/favorite.svg" width="42" height="66" alt="Избранное">
                         <span class="visually-hidden">
                             Избранное
                         </span>
@@ -48,6 +50,8 @@
     </header>
     <main class="main-index">
         <section class="welcome">
+            <img class="main-index-photo" src="images/photo/index-main-background.jpg" width="1200" height="485" alt="Изображение каньона">
+            <img class="divider-main-index-photo" src="images/divider-index-main-background.svg" width="1200" height="57" alt="Декоративный элемент">
             <h1 class="#">WELCOME</h1>
             <p class="#">- to the gorgeous -</p>
             <h2 class="#">SEDONA</h2>
@@ -56,32 +60,42 @@
             <p class="#">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         </section>
         <section class="advantage">
-            <ul class="advantage-list">
+            <ol class="advantage-list">
                 <li class="advantage-item">
                     <h3 class="advantage-title-white">Настоящий городок</h3>
                     <p class="advantage-description-number-white">-№1-</p>
                     <p class="advantage-description-text-white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </li>
                 <li>
-                    <a href="#"><img src="photo-1.png" alt="Изображение местности"></a>
+                    <a href="#">
+                        <img class="advantage" src="images/photo/flags.jpg" width="800" height="384" alt="Местность - флаги">
+                    </a>
                 </li>
                 <li class="advantage-item">
-                    <a href="#"><img src="icon-home.png" alt="Иконка дома"></a>
+                    <a href="#">
+                        <img class="icons" src="images/icons/icon-home.svg" width="75" height="72" alt="Дом">
+                    </a>
                     <h3 class="advantage-title-black">Жильё</h3>
-                    <p class="advantage-description-text-white">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                    <p class="advantage-description-text-white">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
                 <li class="advantage-item">
-                    <a href="#"><img src="icon-food.png" alt="Иконка бургера"></a>
+                    <a href="#">
+                        <img src="images/icons/icon-burger.svg" width="75" height="72" alt="Бургер">
+                    </a>
                     <h3 class="advantage-title-black">Еда</h3>
                     <p class="advantage-description-text-white">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li class="advantage-item">
-                    <a href="#"><img src="icon-souvenirs.png" alt="Иконка подарка"></a>
+                    <a href="#">
+                        <img src="images/icons/icon-souvenirs.svg" width="75" height="72" alt="Сувернир">
+                    </a>
                     <h3 class="advantage-title-black">Сувениры</h3>
                     <p class="advantage-description-text-white">Не только китайского, но и настоящего местного производства!</p>
                 </li>
                 <li>
-                    <a href="#"><img src="photo-2.png" alt="Изображение каньона"></a>
+                    <a href="#">
+                        <img class="advantage" src="images/photo/devile-bridge.jpg" width="800" height="384" alt="Мост дьявола">
+                    </a>
                 </li>
                 <li class="advantage-item">
                     <h3 class="advantage-title-white">Там есть мост дьявола</h3>
@@ -103,7 +117,7 @@
                     <p class="advantage-description-number-black">-№5-</p>
                     <p class="advantage-description-text-white">Большинство едет в Гранд Каньон и толпится там</p>
                 </li>            
-            </ul>
+            </ol>
         </section>
         <section class="hotel-search">
                     <h4 class="hotel-search-title">Заинтересовались?</h4>
@@ -111,12 +125,14 @@
                     <a class="button button-hotel-search-in-sedona" href="#">Поиск гостиницы в седоне</a>
         </section>
         <section class="subscribe-to-newsletter">
+            <img class="advantage-background" src="images/photo/background-index.jpg" width="1200" height="411" alt="Вид на каньон без фокусировки">
             <h5 class="subscribe-to-newsletter-title">Подпишитесь на рассылку</h5>
             <p class="subscribe-to-newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label><input class="field" name="email-adress" placeholder="Ваш e-mail" type="email" required></label>
                 <button class="button" type="submit">Подписаться</button>
-                <a href="#"><img src="background-email.png" alt="Изображение основа для email"></a>
+                <a href="#">
+                </a>
             </form>
         </section>
         <footer class="page-footer">
@@ -124,16 +140,19 @@
                 <ul class="footer-social-list">
                     <li class="footer-social-item">
                         <a class="button" href="https://vk.com/htmlacademy">
+                            <img class="social" src="images/social/social-vk.png" width="24" height="14" alt="ВКонтакте">
                             <span class="visually-hidden">Vkontakte</span>
                         </a>
                     </li>
                     <li class="footer-social-item">
                         <a class="button" href=" https://t.me/htmlacademy">
+                            <img class="social" src="images/social/social-telegram.png" width="18" height="17" alt="Телеграмм">
                             <span class="visually-hidden">Telegram</span>
                         </a>
                     </li>
                     <li class="footer-social-item">
                         <a class="button" href=" https://www.youtube.com/user/htmlacademyru">
+                            <img class="social" src="images/social/social-youtube.png" width="22" height="17" alt="YouTube">
                             <span class="visually-hidden">Youtube</span>
                         </a>
                     </li>
@@ -143,7 +162,7 @@
                 <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
             </section>
             <section class="footer-logo-htmlacademy">
-                <img class="footer-logo-htmlacademy" src="#" alt="Логотип html.academy.">
+                <img class="footer-logo-htmlacademy" src="images/logo-htmlacademy.png" width="115" height="33" alt="Логотип html.academy.">
             </section>
         </footer>
     </main>
