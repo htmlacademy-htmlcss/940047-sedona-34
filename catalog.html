@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -40,8 +41,8 @@
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link" href="#">
-                        <span class="visually-hidden">
-                        Хочу сюда
+                        <span class="want-here">
+                        Хочу сюда!
                     </span>
                 </a>
                 </li>
@@ -136,15 +137,15 @@
                 </fieldset>
 
                 <button class="button" type="submit">Применить</button>
-                <button class="button" type="reset">Сбросить</button>
+                <button class="button-reset" type="reset">Сбросить</button>
             </form>
 
-            <p>Найдено гостиниц: 38</p>
+            <p class="found-hotels">Найдено гостиниц: 38</p>
 
             <select class="select-control" aria-label="Сортировка">
                 <option value="cheap">Сначало дешёвые</option>
-                <option value="cheap">Сначало дорогие</option>
-                <option value="cheap">Сначало популярные</option>
+                <option value="expensive">Сначало дорогие</option>
+                <option value="popular">Сначало популярные</option>
             </select>
             <a href="#" class="button button-light">
                 <img class="button-light" src="images/view-1.svg" width="48" height="48" alt="Показать карточки">
@@ -166,12 +167,12 @@
                     </a>
                     <section class="type-of-housing">
                         <span class="type-of-housing-name">Гостиница</span>
-                        <span class="type-of-housing-name">От 4000 ₽</span>
+                        <span class="type-of-price">От 4000 ₽</span>
                     </section>
-                    <a class="product-card-button button" href="#">Подробнее</a>
-                    <a class="product-card-button button" href="#">В избранное</a>
+                    <a class="product-card-button-more button" href="#">Подробнее</a>
+                    <a class="product-card-button-favorites button" href="#">В избранное</a>
                     <img class="prodact-card-image" src="images/stars/stars-4.svg" width="140" height="37" alt="Рейтинг 8,5">
-                    <p>Рейтинг 8,5</p>
+                    <p class="rating">Рейтинг 8,5</p>
                 </li>
                 <li class="product-card">
                     <a class="product-cad-link" href="product.html">
@@ -179,12 +180,12 @@
                     </a>
                     <section class="type-of-housing">
                         <span class="type-of-housing-name">Гостиница</span>
-                        <span class="type-of-housing-name">От 4000 ₽</span>
+                        <span class="type-of-price">От 4000 ₽</span>
                     </section>
-                    <a class="product-card-button button" href="#">Подробнее</a>
-                    <a class="product-card-button button" href="#">В избранном</a>
+                    <a class="product-card-button-more button" href="#">Подробнее</a>
+                    <a class="product-card-button-favorites- button" href="#">В избранное</a>
                     <img class="prodact-card-image" src="images/stars/stars-4.svg" width="140" height="37" alt="Рейтинг 9,2">
-                    <p>Рейтинг 9,2</p>
+                    <p class="rating">Рейтинг 9,2</p>
                 </li>
                 <li class="product-card">
                     <a class="product-cad-link" href="product.html">
@@ -192,12 +193,12 @@
                     </a>
                     <section class="type-of-housing">
                         <span class="type-of-housing-name">Гостиница</span>
-                        <span class="type-of-housing-name">От 2500 ₽</span>
+                        <span class="type-of-price">От 2500 ₽</span>
                     </section>
-                    <a class="product-card-button button" href="#">Подробнее</a>
-                    <a class="product-card-button button" href="#">В избранное</a>
+                    <a class="product-card-button-more button" href="#">Подробнее</a>
+                    <a class="product-card-button-favorites button" href="#">В избранное</a>
                     <img class="prodact-card-image" src="images/stars/stars-3.svg" width="140" height="37" alt="Рейтинг 6,9">
-                    <p>Рейтинг 6,9</p>
+                    <p class="rating">Рейтинг 6,9</p>
                 </li>
                 <li class="product-card">
                     <a class="product-cad-link" href="product.html">
@@ -205,12 +206,12 @@
                     </a>
                     <section class="type-of-housing">
                         <span class="type-of-housing-name">Гостиница</span>
-                        <span class="type-of-housing-name">От 1500 ₽</span>
+                        <span class="type-of-price">От 1500 ₽</span>
                     </section>
-                    <a class="product-card-button button" href="#">Подробнее</a>
-                    <a class="product-card-button button" href="#">В избранное</a>
+                    <a class="product-card-button-more-button" href="#">Подробнее</a>
+                    <a class="product-card-button-favorites-button" href="#">В избранное</a>
                     <img class="prodact-card-image" src="images/stars/stars-2.svg" width="140" height="37" alt="Рейтинг 5">
-                    <p>Рейтинг 5,0</p>
+                    <p class="rating">Рейтинг 5,0</p>
                 </li>
             </ul>
             
@@ -221,7 +222,7 @@
                   </a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link pagination-current">1</a>
+                  <a class="pagination-link-pagination-current">1</a>
                 </li>
                 <li class="pagination-item">
                   <a class="pagination-link" href="#">2</a>
