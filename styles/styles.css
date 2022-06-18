@@ -51,7 +51,7 @@ body {
     margin-left: 70px;
 }
 
-nav {
+.page-navigation {
     display: flex;
 }
 
@@ -184,8 +184,12 @@ nav {
     width: 400px;
 }
 
-.advantage-photo {
+.advantage-photo-flag {
     background-image: url("../images/photo/flags.jpg");
+    width: 800px;
+}
+
+.advantage-photo-bridge {
     background-image: url("../images/photo/devile-bridge.jpg");
     width: 800px;
 }
@@ -283,7 +287,7 @@ nav {
 /* Соц сети */
 .social {
     display: flex;
-    margin-right: 0 auto;
+    margin: 0 auto;
     margin-left: 72px;
 }
 
@@ -404,7 +408,7 @@ nav {
 /* Сортировка гостиниц */
 .select-control {
     display: flex;
-    background-image: #ffffff;
+    background-color: #ffffff;
     color: #333333;
     margin-right: 81px;
 }
@@ -532,5 +536,5 @@ nav {
     color: #333333;
     text-decoration: none;
     text-transform: none;
-    padding: left;
+    padding-left: 0;
 }
