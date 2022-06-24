@@ -39,7 +39,7 @@ body {
     width: 1200px;
 }
 
-/* Page-header */
+/*Page-header*/
 .page-header {
     background-color: #ffffff;
     color: #333333;
@@ -61,18 +61,26 @@ body {
 }
 
 .navigation-list {
+    display: flex;
+    flex-wrap: wrap;
     width: 961px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    /*убирает точки */
 }
 
 .navigation-user {
     max-width: 348px;
+    min-width: 12px;
+    min-height: 16px;
     margin-left: auto;
 }
 
-/* Главная, О седоне, Каталог */
+/*Главная, О седоне, Каталог*/
 .navigation-link {
+    display: block;
+    padding: 20px 34px 20px 17px;
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
@@ -81,7 +89,7 @@ body {
     text-transform: capitalize;
 }
 
-/* Поиск, Избранное (иконки) */
+/*Поиск, Избранное (иконки)*/
 .navigation-icons {
     font-size: 20px;
     font-weight: 700;
@@ -92,7 +100,7 @@ body {
     text-transform: capitalize;
 }
 
-/* Скрывает текст*/
+/*Скрывает текст*/
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -104,7 +112,7 @@ body {
     overflow: hidden;
 }
 
-/* Хочу сюда! */
+/*Хочу сюда!*/
 .want-here {
     font-size: 16px;
     font-weight: 700;
@@ -120,13 +128,15 @@ body {
     margin: 0 auto;
 }
 
-/* Welcome на картинке */
+/*Welcome на картинке*/
 .main-container {
     flex-grow: 1;
 }
 
 .welcome-block {
     background-image: url("../images/welcome-block.svg");
+    margin-top: 51px;
+    margin-bottom: 82px;
 }
 
 .welcome-photo-main {
@@ -137,7 +147,7 @@ body {
     background-image: url("../images/index-background-decoration.svg");
 }
 
-/* Текст под картинкой */
+/*Текст под картинкой*/
 .sedona-small-town {
     font-size: 30px;
     font-weight: 700;
@@ -151,7 +161,7 @@ body {
     line-height: 26px;
 }
 
-/*  №1 и №2*/
+/* №1 и №2*/
 .advantage-list {
     display: flex;
     flex-wrap: wrap;
@@ -169,6 +179,8 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     width: 400px;
+    margin-top: 92px;
+    margin-bottom: 30px;
 }
 
 .advantage-description-number-white {
@@ -176,12 +188,16 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     width: 400px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .advantage-description-text-white {
     background-color: #82B3D3;
     color: #ffffff;
     width: 400px;
+    margin-top: 0;
+    margin-bottom: 92px;
 }
 
 .advantage-photo-flag {
@@ -194,7 +210,12 @@ body {
     width: 800px;
 }
 
-/*  Дом, бургер, сувениры*/
+/* Дом, бургер, сувениры*/
+.icons {
+    margin-top: 81px;
+    margin-bottom: 30px;
+}
+
 .advantage-title-black {
     font-size: 24px;
     font-weight: 700;
@@ -203,20 +224,46 @@ body {
     color: #333333;
     text-transform: uppercase;
     width: 400px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .advantage-description-text-black {
     background-color: rgba(131, 179, 211, 0.12);
     color: #333333;
     width: 400px;
+    margin-top: 0;
+    margin-bottom: 80px;
 }
 
-/*  № 3 4 5 */
+/*№ 3 4 5 */
 .advantage-description-number-black {
     background-color: rgba(131, 179, 211, 0.12);
     color: #333333;
     text-transform: uppercase;
     width: 400px;
+}
+
+/*преимущества 3 4 и 5*/
+.advantage-title-black-end {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    background-color: rgba(131, 179, 211, 0.12);
+    color: #333333;
+    text-transform: uppercase;
+    width: 400px;
+    margin-top: 103px;
+    margin-bottom: 30px;
+}
+
+/*текст преимуществ 3 4 и 5 */
+.advantage-description-text-black-end {
+    background-color: rgba(131, 179, 211, 0.12);
+    color: #333333;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 102px;
 }
 
 /* Гостиницы в Седоне */
@@ -225,6 +272,8 @@ body {
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
+    margin-top: 91px;
+    margin-bottom: 29px;
 }
 
 .hotel-search-text {
@@ -233,6 +282,8 @@ body {
     text-align: center;
     text-decoration: none;
     text-transform: none;
+    margin-top: 0;
+    margin-bottom: 56px;
 }
 
 .button-hotel-search-in-sedona {
@@ -243,13 +294,15 @@ body {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 0 auto;
     padding: 12px 15px 12px 15px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Рассылка */
 .subscribe-to-newsletter-photo {
     background-image: url("../images/photo/background-index.jpg");
+    margin-top: 105px;
 }
 
 .subscribe-to-newsletter-title {
@@ -259,6 +312,8 @@ body {
     background-color: #333333;
     color: #ffffff;
     text-transform: uppercase;
+    margin-top: 94px;
+    margin-bottom: 29px;
 }
 
 .subscribe-to-newsletter-text {
@@ -267,6 +322,8 @@ body {
     line-height: 26px;
     background-color: #333333;
     color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 46px;
 }
 
 .button {
@@ -275,23 +332,28 @@ body {
     line-height: 36px;
     background-color: #82B3D3;
     color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 94px;
 }
 
-/* Footer */
+/*Footer*/
 .page-footer-container {
     display: flex;
     width: 1200px;
     margin: 0 auto;
 }
 
-/* Соц сети */
+/*Соц сети*/
 .social {
-    display: flex;
-    margin: 0 auto;
     margin-left: 72px;
 }
 
-/* Телефон */
+.footer-social-list {
+    list-style-type: none;
+    /* убирает точки-список */
+}
+
+/*Телефон*/
 .footer-contacts-phone {
     display: flex;
     margin-right: 0;
@@ -305,7 +367,7 @@ body {
     text-transform: capitalize;
 }
 
-/* Логотип */
+/*Логотип*/
 .footer-logo {
     display: flex;
     margin-right: 72px;
@@ -317,70 +379,105 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Catalog page - как наложить текст на картинку? */
-.inner-header-title {
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 78px;
+/*Страница catalog*/
+.main-inner-photo {
     background-image: url("../images/photo/background-catalog.jpg");
-    color: #ffffff;
+    width: 1200px;
+    height: 393px;
 }
 
-/* Иконка дома */
-.icons-catalog {
-    background-image: url("../images/home-back.svg");
-}
-
-/* Гостиницы  */
-.breadcrumbs-link {
-    font-size: 16px;
-    background-color: #333333;
-    color: #ffffff;
-}
-
-/*Гостиницы Седоны */
+/*заголовок на картинке Гостиницы Седоны*/
 .inner-header-title {
     display: flex;
     width: 493px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 78px;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin-left: 70px;
+    margin-bottom: 0;
 }
 
-/* Хлебные крошки */
-.breadcrumbs-link {
+/*хлебные крошки*/
+.breadcrumbs {
     display: flex;
-    width: 111px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-/* Общий блок от Инфраструктура до Сбросить */
+/*1/ иконка дома*/
+.icons-catalog {
+    margin-left: 72px;
+    margin-right: 26px;
+}
+
+/*2/ Гостиницы*/
+.breadcrumbs-link {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/*Общий блок от Инфраструктура до Сбросить*/
 .catalog-filter-block {
     display: flex;
     width: 1060px;
+    height: 139px;
+    margin-left: 70px;
+    margin-top: 40px;
 }
 
-/* Инфраструктура, тип жилья*/
+/*Инфраструктура, Тип жилья*/
 .catalog-filter-group-type {
     display: flex;
     flex-wrap: wrap;
     width: 366px;
+    height: 149px;
     margin-right: auto;
 }
 
-/* Стоимость, Применить, Сбросить*/
+/*квадрат и круги*/
+.catalog-filter-list {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+/*перечисление списка*/
+.control {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/*Стоимость, Применить, Сбросить*/
 .catalog-filter-group-price {
     display: flex;
     width: 519px;
     margin-left: auto;
 }
 
-/* Инфраструктура, Тип Жилья и Стоимость */
+/*Инфраструктура, Тип Жилья и Стоимость*/
 .catalog-filter-title {
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
-    background-color: #333333;
     color: #ffffff;
 }
 
-/* Кнопка Сбросить */
+/*Кнопка Применить*/
+.button-submit {
+    background-color: #82B3D3;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px;
+    margin: 0;
+}
+
+/*Кнопка Сбросить*/
 .button-reset {
     font-size: 16px;
     font-weight: 400;
@@ -389,37 +486,61 @@ body {
     color: #ffffff;
 }
 
-/* Найдено гостиниц, сортировка и вид */
+/*Найдено гостиниц, сортировка и вид*/
 .catalog {
     display: flex;
     width: 1057px;
-    margin-top: 50px;
+    margin-top: 50x;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+/*найдено гостиниц*/
+.catalog {
+    display: flex;
+    background-color: #ffffff;
 }
 
 /* Найдено гостиниц */
 .found-hotels {
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     margin-left: 72px;
     margin-right: 191px;
+    margin-top: 64px;
+    width: 338px;
 }
 
-/* Сортировка гостиниц */
+/*Сортировка гостиниц*/
 .select-control {
     display: flex;
     background-color: #ffffff;
     color: #333333;
     margin-right: 81px;
+    margin-top: 64px;
+    padding: 14px 43px 14px 19px;
+    width: 225px;
+    height: 48px;
 }
 
-/* Сортировка по */
-.select-control {
+/*Сортировка по*/
+.button-light {
+    display: flex;
     background-color: #ffffff;
-    margin-right: auto;
+    margin-top: 32px;
+    padding-right: 8px;
 }
 
-/* Результаты сортировки */
+.button-light {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 65px;
+}
+
+/*Результаты сортировки*/
 .product-catalog {
     display: flex;
     width: 1056px;
@@ -433,21 +554,47 @@ body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*фотографии отелей*/
+.hotel-photo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 38px;
 }
 
 
-/* Заголовок гостиниц */
+/*Заголовок гостиниц */
 .product-card-title {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
-    color: #333333;
-    background-color: #ffffff;
     text-decoration: none;
     text-transform: none;
+    color: #333333;
+    background-color: #ffffff;
+    text-align: left;
+    width: 300px;
+    margin-left: 20px;
 }
 
-/* Подробнее */
+/*Гостиница*/
+.type-of-housing {
+    display: flex;
+    margin-left: 20px;
+}
+
+/*цена от*/
+.type-of-price {
+    display: flex;
+    margin-left: 84px;
+}
+
+/*Подробнее*/
 .product-card-button-more {
     font-weight: 700;
     background-color: #756157;
@@ -455,9 +602,10 @@ body {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    margin-left: 20px;
 }
 
-/* Избранное */
+/*Избранное*/
 .product-card-button-favorites {
     font-weight: 700;
     background-color: #82B3D3;
@@ -465,9 +613,10 @@ body {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    margin-left: 20px;
 }
 
-/* Рейтинг */
+/*Рейтинг*/
 .rating {
     font-size: 16px;
     line-height: 20px;
@@ -476,19 +625,28 @@ body {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    margin-left: 20px;
 }
 
-/* Нумерация внизу и Гостиниц на странице (общий) */
+/*Нумерация внизу и Гостиниц на странице (общий)*/
 .page-number {
     display: flex;
+    padding: 0;
 }
 
-/* Нумерация */
+/*Нумерация*/
 .pagination {
     display: flex;
+    max-width: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-/* Текущая страница 1 */
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+/*Текущая страница 1*/
 .pagination-link-pagination-current {
     font-size: 20px;
     font-weight: 700;
@@ -501,40 +659,48 @@ body {
     width: 12px;
     padding: 9px 10px 10px 21px;
     justify-content: space-between;
+    margin-top: 96px;
 }
 
-/* Остальные страницы */
+/*Остальные страницы*/
 .pagination-link {
-    font-size: 20px;
-    font-weight: 700;
+    display: block;
+    box-sizing: border-box;
+    padding: 9px 10px 10px 21px;
+    width: 55px;
+    height: 55px;
     line-height: 36px;
+    font-weight: 700;
     background-color: #82B3D3;
     color: #ffffff;
-    text-align: center;
     text-decoration: none;
-    text-transform: none;
-    width: 12px;
-    margin-right: auto;
-    padding: 9px 10px 10px 21px;
+    margin-top: 126px;
 }
 
-/* Гостиниц на странице */
+/*Гостиниц на странице*/
 .hotel-on-page {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: #ffffff;
     color: #333333;
     text-decoration: none;
     text-transform: none;
-    margin-left: auto;
+    margin-left: 615px;
     margin-right: 71px;
+    padding: 0;
+    margin-top: 126px;
+    margin-right: auto;
 }
 
-/* Выпадающий список */
-.number {
+/*Выпадающий список*/
+.select-number-hotel-on-page {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: #ffffff;
     color: #333333;
     text-decoration: none;
     text-transform: none;
-    padding-left: 0;
+    width: 160px;
+    height: 48px;
+    margin-right: auto;
+    margin-left: 51px;
+    padding: 0;
 }
