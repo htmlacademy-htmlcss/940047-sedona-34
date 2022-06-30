@@ -143,7 +143,7 @@ body {
 /*Текст под картинкой*/
 .sedona-small-town {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 36px;
     text-transform: uppercase;
 }
@@ -258,6 +258,11 @@ body {
 }
 
 /* Гостиницы в Седоне */
+.hotel-search {
+    display: grid;
+    justify-content: center;
+}
+
 .hotel-search-title {
     font-size: 30px;
     font-weight: 700;
@@ -277,6 +282,7 @@ body {
     margin-bottom: 56px;
 }
 
+/*кнопка поиск гостиницы*/
 .button-hotel-search-in-sedona {
     font-size: 20px;
     font-weight: 700;
@@ -287,31 +293,34 @@ body {
     text-transform: uppercase;
     padding: 12px 15px 12px 15px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 93px;
+    width: 544px;
 }
 
 /* Рассылка */
-.subscribe-to-newsletter-photo {
+/*фон*/
+.subscribe-to-newsletter {
+    display: grid;
     background-image: url("../images/photo/background-index.jpg");
-    margin-top: 105px;
+    height: 411px;
 }
 
+/*Подпишитесь*/
 .subscribe-to-newsletter-title {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
-    background-color: #333333;
     color: #ffffff;
     text-transform: uppercase;
     margin-top: 94px;
     margin-bottom: 29px;
 }
 
+/*текст*/
 .subscribe-to-newsletter-text {
     font-size: 22px;
     font-weight: 400;
     line-height: 26px;
-    background-color: #333333;
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 46px;
@@ -334,7 +343,10 @@ body {
 
 /*Соц сети*/
 .social {
+    display: grid;
+    grid-template-columns: 26px 26px 26px;
     margin-left: 72px;
+    margin-top: 40px;
 }
 
 /*Телефон*/
@@ -342,6 +354,7 @@ body {
     display: flex;
     margin-right: 0;
     margin-left: 240px;
+    margin-top: 40px;
     width: 720px;
     font-size: 40px;
     line-height: 40px;
@@ -356,6 +369,7 @@ body {
     display: flex;
     margin-right: 72px;
     margin-left: auto;
+    margin-top: 40px;
     background-image: url("../images/logo-htmlacademy.png");
     background-color: #ffffff;
     color: #ffffff;
@@ -472,12 +486,6 @@ body {
     text-transform: uppercase;
 }
 
-/*найдено гостиниц*/
-.catalog {
-    display: flex;
-    background-color: #ffffff;
-}
-
 /* Найдено гостиниц */
 .found-hotels {
     display: flex;
@@ -509,9 +517,6 @@ body {
     background-color: #ffffff;
     margin-top: 32px;
     padding-right: 8px;
-}
-
-.button-light {
     width: 48px;
     height: 48px;
     margin-bottom: 65px;
@@ -527,10 +532,25 @@ body {
     align-items: center;
 }
 
-/*Настройки списка */
+/*Настройки списка div */
+.product-catalog {
+    width: 1056px;
+    height: 876px;
+}
+
+/*Настройки списка ul*/
 .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 18px;
+    margin-bottom: 66px;
+}
+
+/*/*Настройки списка li*/
+.product-card {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 340px;
 }
 
 /*фотографии отелей*/
@@ -538,9 +558,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-left: 20px;
-    margin-right: 38px;
+    margin-right: 20px;
 }
-
 
 /*Заголовок гостиниц */
 .product-card-title {
@@ -570,17 +589,22 @@ body {
 
 /*Подробнее*/
 .product-card-button-more {
+    display: flex;
     font-weight: 700;
     background-color: #756157;
     color: #ffffff;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    margin-top: 16px;
     margin-left: 20px;
+    width: 140px;
+    height: 37px;
 }
 
 /*Избранное*/
 .product-card-button-favorites {
+    display: flex;
     font-weight: 700;
     background-color: #82B3D3;
     color: #ffffff;
@@ -588,18 +612,31 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     margin-left: 20px;
+    width: 140px;
+    height: 37px;
+}
+
+/*звезды*/
+.prodact-card-image {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 16px;
 }
 
 /*Рейтинг*/
 .rating {
+    display: flex;
     font-size: 16px;
     line-height: 20px;
     background-color: #F2F2F2;
-    color: #ffffff;
+    color: #333333;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    margin-top: 16px;
     margin-left: 20px;
+    width: 160px;
+    height: 37px;
 }
 
 /*Нумерация внизу и Гостиниц на странице (общий)*/
@@ -611,7 +648,8 @@ body {
 /*Нумерация*/
 .pagination {
     display: flex;
-    max-width: 0;
+    max-width: 370px;
+    margin-top: 96px;
 }
 
 .pagination-item:not(:last-child) {
@@ -650,17 +688,10 @@ body {
 }
 
 /*Гостиниц на странице*/
-.hotel-on-page {
+.hotel-number {
     display: flex;
-    background-color: #ffffff;
-    color: #333333;
-    text-decoration: none;
-    text-transform: none;
-    margin-left: 615px;
-    margin-right: 71px;
-    padding: 0;
-    margin-top: 126px;
-    margin-right: auto;
+    width: 175px;
+    height: 21px;
 }
 
 /*Выпадающий список*/
@@ -672,7 +703,53 @@ body {
     text-transform: none;
     width: 160px;
     height: 48px;
-    margin-right: auto;
-    margin-left: 51px;
-    padding: 0;
+}
+
+/*блок с подпиской каталога*/
+.subscribe-to-newsletter-catalog {
+    display: flex;
+    flex-direction: column;
+    height: 411px;
+}
+
+/*Подпишитесь на рассылку*/
+.subscribe-to-newsletter-title-catalog{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #333333;
+    text-transform: uppercase;
+    margin-top: 94px;
+    margin-bottom: 29px;
+}
+
+.subscribe-to-newsletter-text-catalog{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 46px;
+}
+
+/*Ваш email*/
+.field {
+    display: grid;
+    gap: 0;
+    margin-left: 200px;
+    width: 600px;
+    height: 60px;
+}
+
+/*Подписаться*/
+.field-submit {
+    display: grid;
+    width: 200px;
+    height: 60px;
+}
+
+.email-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-right: 0;
 }
