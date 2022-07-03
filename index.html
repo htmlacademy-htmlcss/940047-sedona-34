@@ -25,11 +25,12 @@
                             <a class="navigation-link" href="hotels.html">Гостиницы</a>
                         </li>
                     </ul>
-                    <ul class="navigation-list navigation-user reset-list">
+                    <ul class="navigation-user reset-list">
                         <li class="navigation-item">
                             <a class="navigation-icons" href="#">
-                                <img class="navigation-item-icon" src="images/loupe.svg" width="42" height="66"
-                                    alt="Поиск">
+                                <svg aria-hidden="true" focusable="false" width="43" height="66" viewBox="0 0 43 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m30.16 40.05-3.71-3.7c1-1.3 1.7-3 1.7-4.9 0-4.4-3.6-8-8.02-8a8.12 8.12 0 0 0-8.02 8.1 8.03 8.03 0 0 0 12.93 6.3l3.71 3.7 1.4-1.5Zm-10.03-2.5c-3.3 0-6.02-2.7-6.02-6a6.03 6.03 0 0 1 12.04 0c0 3.3-2.71 6-6.02 6Z" fill="#000"/>
+                                </svg>
                                 <span class="visually-hidden">
                                     Поиск
                                 </span>
@@ -37,8 +38,9 @@
                         </li>
                         <li class="navigation-item">
                             <a class="navigation-icons" href="#">
-                                <img class="navigation-item-icon" src="images/favorite.svg" width="42" height="66"
-                                    alt="Избранное">
+                                <svg aria-hidden="true" focusable="false" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.58 17c-.3 0-.6-.1-.8-.4-5.42-6.1-6.72-7.5-7.03-7.9A5.4 5.4 0 0 1 6.16 0c1.31 0 2.51.5 3.52 1.3a5.47 5.47 0 0 1 9.03 4.1c0 1.3-.5 2.5-1.31 3.4l-7.02 7.9c-.2.2-.4.3-.8.3ZM3.56 7.5c.3.4 3.51 4 6.12 6.9l6.21-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.71 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.71-1.3c-1.8 0-3.31 1.5-3.31 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" fill="#000"/>
+                                </svg>
                                 <span class="visually-hidden">
                                     Избранное
                                 </span>
@@ -59,13 +61,11 @@
         <main class="main-container main-index">
             <div class="main-container wrapper">
                 <section class="welcome">
-                    <img class="welcome-block" src="images/welcome-block.svg" width="458" height="352"
+                    <img class="welcome-block" src="images/welcome-block.svg" width="1200" height="485"
                         alt="Welcome to the gorgeous Sedona">
-                    <img class="welcome-photo-main" src="images/photo/index-background.jpg" width="458" height="352"
-                        alt="Welcome to the gorgeous Sedona">
-                    <img class="welcome-block-decor" src="images/divider-index-main-decor.svg" width="1200" height="57"
-                        alt="Декоративный элемент">
-                    <p class="sedona-small-town">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+                    <p class="sedona-small-town">
+                        <strong>Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</strong>
+                    </p>
                     <p class="five-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
                 </section>
                 <section class="text-transform">
@@ -145,24 +145,22 @@
                 </section>
                 <section class="hotel-search">
                     <h2 class="hotel-search-title">Заинтересовались?</h2>
-                    <p class="hotel-search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+                    <p class="hotel-search-text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие
                         предложения гостиниц в Седоне</p>
-                    <a class=" button-hotel-search-in-sedona" href="#">Поиск гостиницы в седоне</a>
+                    <a class="button-hotel-search-in-sedona" href="#">Поиск гостиницы в седоне</a>
                 </section>
                 <section class="subscribe-to-newsletter">
-                    <img class="subscribe-to-newsletter-photo" src="images/photo/background-index.jpg" width="1200"
-                        height="411" alt="Вид на каньон без фокусировки">
                     <h5 class="subscribe-to-newsletter-title">Подпишитесь на рассылку</h5>
-                    <p class="subscribe-to-newsletter-text">Только полезная информация и никакого спама, честное
+                    <p class="subscribe-to-newsletter-text">Только полезная информация и никакого спама, <br>честное
                         бойскаутское!</p>
                     <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
-                        <label><input class="field" name="email-adress" placeholder="Ваш e-mail" type="email"
-                                required></label>
-                        <button class="button" type="submit">Подписаться</button>
-                        <a href="#">
-                        </a>
+                        <label class="form-label-email">
+                            <input class="field" name="email-adress" placeholder="Ваш e-mail" type="email" required>
+                        </label>
+                        <button class="button field-submit" type="submit">Подписаться</button>
                     </form>
                 </section>
+
             </div>
         </main>
 
