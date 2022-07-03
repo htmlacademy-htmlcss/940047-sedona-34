@@ -352,6 +352,7 @@ body {
     display: flex;
     margin-bottom: 30px;
     margin-top: 40px;
+    margin-left: 72px;
 }
 
 .footer-social-list {
@@ -364,9 +365,9 @@ body {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    margin-left: 72px;
     margin-top: 40px;
     list-style-type: none;
+    padding-right: 26px;
 }
 
 /*Телефон*/
@@ -679,16 +680,14 @@ body {
 /*Нумерация внизу и Гостиниц на странице (общий)*/
 .page-number {
     display: flex;
-    justify-content: center;
+    width: 1056px;
+    justify-content: space-between;
     align-items: center;
-    margin-left: auto;
 }
 
 /*Нумерация*/
 .pagination {
     display: flex;
-    max-width: 370px;
-    margin-top: 96px;
 }
 
 .pagination-item:not(:last-child) {
@@ -725,11 +724,16 @@ body {
     text-decoration: none;
 }
 
+/*блок гостниц + список*/
+.hotel-general {
+    display: flex;
+    width: 386px;
+
+}
 /*Гостиниц на странице*/
 .hotel-number {
-    display: flex;
-    width: 175px;
-    height: 21px;
+    margin-right: 51px;
+
 }
 
 /*Выпадающий список*/
