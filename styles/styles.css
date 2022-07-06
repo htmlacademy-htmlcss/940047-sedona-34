@@ -423,13 +423,11 @@ body {
 }
 
 .button-vk .button-telegram .button-youtube {
-    background-color: none;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    background-color: #82B3D3;
 }
 
 .footer-social-item-vk {
@@ -664,7 +662,6 @@ body {
     cursor: pointer;
     border: none;
     width: 130px;
-    height: none;
     border-radius: 4px;
     align-items: center;
     justify-content: center;
@@ -843,7 +840,7 @@ body {
     text-transform: uppercase;
     margin-top: 16px;
     margin-left: 20px;
-    width: 112x;
+    width: 112px;
     cursor: pointer;
     border-radius: 4px;
     align-items: center;
