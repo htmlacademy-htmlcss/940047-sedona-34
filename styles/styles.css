@@ -105,6 +105,7 @@ body {
     padding-right: 34px;
 }
 
+/*подчеркивание Главная*/
 .navigation-link-current::before{
     position: absolute;
     right: 20px;
@@ -114,6 +115,18 @@ body {
     background-color: #756157;
     content: "";
     width: 68px;
+}
+
+/*подчеркивание Гостиницы*/
+.navigation-link-current-hotels::before {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    left: 219px;
+    height: 4px;
+    background-color: #756157;
+    content: "";
+    width: 95px;
 }
 
 /*Поиск (иконка)*/
@@ -138,11 +151,14 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
-    padding: 0;
+    margin: 0;
     border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
+  }
 
 /*Хочу сюда!*/
 .want-here {
@@ -183,6 +199,7 @@ body {
     padding-top: 51px;
     padding-bottom: 82px;
     background-repeat: no-repeat;
+
 }
 
 .welcome-block-decor {
@@ -411,7 +428,6 @@ body {
 }
 
 /*Соц сети*/
-
 .footer-social {
     margin: 0;
     padding: 0;
@@ -420,50 +436,37 @@ body {
 
 .footer-social-list {
     display: flex;
-}
-
-.button-vk .button-telegram .button-youtube {
-    display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-social-item-vk {
-    margin-right: 26px;
-}
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 40px;
+  }
 
-.footer-social-item-telegram {
-    margin-right: 26px;
-}
+  .social-media {
+    fill: #83B3D3;
+  }
 
-.button-vk:hover svg {
+  .social-media:hover {
     fill: #68A2CA;
-}
+  }
 
-.button-vk:active svg {
-    fill: rgba(104, 162, 202, 0.3);
-}
-
-.button-telegram:hover svg {
+  .social-media:focus {
     fill: #68A2CA;
-}
+  }
 
-.button-telegram:active svg {
+  .social-media:active {
     fill: rgba(104, 162, 202, 0.3);
-}
-
-.button-youtube:hover svg {
-    fill: #68A2CA;
-}
-
-.button-youtube:active svg {
-    fill: rgba(104, 162, 202, 0.3);
-}
+  }
 
 /*Телефон*/
-.footer-contacts-phone {
+.contacts-telefon {
     display: flex;
     margin-left: 240px;
     margin-top: 40px;
@@ -471,26 +474,46 @@ body {
     margin-right: 247px;
     font-size: 40px;
     line-height: 40px;
-    background-color: #ffffff;
-    color: #333333;
+    fill: #333333;
     text-decoration: none;
     text-transform: capitalize;
-
+    cursor: pointer;
+}
+.contacts-telefon:hover {
+    fill: #756157;
 }
 
+.contacts-telefon:focus {
+    fill: #756157;
+  }
+
+  .contacts-telefon:active {
+    fill: rgba(117, 97, 87, 0.3);
+  }
+
 /*Логотип*/
-.footer-logo {
+.logo-htmlacademy {
     display: flex;
     margin-right: 72px;
     margin-left: auto;
     margin-top: 40px;
-    background-image: url("../images/logo-htmlacademy.png");
-    background-color: #ffffff;
-    color: #ffffff;
+    fill: #333333;
     background-size: 100% auto;
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
+.logo-htmlacademy:hover {
+    fill: #756157;
+}
+
+.clogo-htmlacademy:focus {
+    fill: #756157;
+  }
+
+  .clogo-htmlacademy:active {
+    fill: rgba(117, 97, 87, 0.3);
+  }
 
 /*Страница catalog*/
 .main-inner-photo {
@@ -577,6 +600,7 @@ body {
     border: none;
     padding: 0;
     margin: 0;
+    color: #ffffff;
 }
 
 /*квадрат и круги*/
@@ -629,11 +653,6 @@ body {
     color: #ffffff;
     text-align: left;
     margin-right: 70px;
-}
-
-/*поле ввода цены*/
-.control-price {
-    width: 144px;
 }
 
 /*блок применить и сбросить*/
@@ -723,6 +742,9 @@ body {
     padding: 14px 43px 14px 19px;
     width: 225px;
     height: 48px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    font-family: inherit;
 }
 
 /*Сортировка по*/
@@ -735,7 +757,7 @@ body {
     height: 48px;
     margin-bottom: 57px;
     cursor: pointer;
-     justify-content: center;
+    justify-content: center;
 }
 
 /*Результаты сортировки*/
@@ -986,6 +1008,9 @@ body {
     border-radius: 10px 0px 0px 10px;
     border: none;
     background: #F2F2F2;
+    padding-left: 22px;
+    font: inherit;
+    font-size: 18px;
 }
 
 /*Подписаться*/
@@ -1014,3 +1039,174 @@ body {
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
 }
+
+/*Общий popover*/
+.popover {
+    position: absolute;
+    top: 11.95%;
+    right: 22.11%;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 715px;
+    padding: 62px 70px 70px 68px;
+    font-family: "PT Sans", sans-serif;
+    color: #242424;
+    background-color: #ffffff;
+    min-height: 400px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+/*Заголовок*/
+.popover-title {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 413px;
+}
+
+/*Кнопка закрыть*/
+.popover-close-button {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    background: #F2F2F2;
+    border-radius: 50%;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Стоимость - Range */
+.range-scale {
+    position: relative;
+    height: 4px;
+    margin-top: 32px;
+    opacity: 0.3;
+  }
+
+  .range-bar {
+  height: 4px;
+  width: 227px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+
+  .range-toggle:hover {
+    background-color: #FFFFFF;
+  }
+
+  .range-toggle:focus {
+    outline: 2px solid #83B3D3;
+  }
+
+  .range-toggle:active {
+    outline: 3px solid #83B3D3;
+}
+
+.toggle-min {
+    top: -8px;
+    left: 0;
+  }
+
+  .toggle-max {
+    top: -8px;
+    right: 100px;
+  }
+
+  /* стоимость от и до */
+  .range-wrapper-inputs {
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+  }
+
+  .range-input {
+    padding: 0;
+    margin: 0;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+    width: 114px;
+    height: 48px;
+  }
+
+  /*убирает стрелки вверх/вниз в полях*/
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Квадрат*/
+.control {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+  }
+
+  /* Mark */
+  .control-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-image: url("images/check-mark.svg");
+  }
+
+  .control:hover .control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .control:focus .control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: solid #83B3D3;
+  }
+
+  .control:active .control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Круг*/
+.control-circle {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+  }
+
+  /* Mark */
+  .control-mark-circle {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #ffffff;
+  }
+
+  .control:hover .control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .control:focus .control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: solid #83B3D3;
+  }
+
+  .control:active .control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
