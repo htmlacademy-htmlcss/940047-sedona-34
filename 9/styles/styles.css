@@ -1,0 +1,1981 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    background-color: #E5E5E5;
+}
+
+/*Обнуляет и убирает маркированные списики в ul и ol*/
+.reset-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper-inside {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/*Page-header*/
+.page-header {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/*логотип*/
+.page-header-logo {
+    position: absolute;
+    display: block;
+    width: 139px;
+    margin-right: 30px;
+    margin-left: 70px;
+    z-index: 1;
+}
+
+.page-navigation {
+    display: flex;
+    margin-bottom: -5px;
+    z-index: 1;
+}
+
+/*блок главная, гостиницы, о седоне*/
+.navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-right: 199px;
+    padding-top: 20px;
+    padding-left: 239px;
+    padding-bottom: 20px;
+    padding-right: 62px;
+    width: 390px;
+}
+
+/*поиск, избранное, хочу*/
+.navigation-user {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-right: 70px;
+    align-items: center;
+    width: 264px;
+}
+
+/*Главная, О седоне, Каталог*/
+.navigation-link {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #333333;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding-right: 34px;
+}
+
+/*подчеркивание Гостиницы*/
+.navigation-link-current-hotels::before {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    left: 456px;
+    height: 4px;
+    background-color: #756157;
+    content: "";
+    width: 95px;
+}
+
+/*Поиск (иконка)*/
+.navigation-item-loupe {
+    color: #333333;
+    margin: 0;
+    padding: 24px 12px 24px 12px;
+}
+
+/*Избранное (иконка)*/
+.navigation-item-favourite {
+    color: #333333;
+    margin: 0;
+    padding-top: 24px;
+    padding-right: 12px;
+    padding-bottom: 24px;
+    margin-right: 20px;
+}
+
+/*12*/
+.count-badge {
+    position: absolute;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    border-radius: 50px;
+    background-color: #7DB54F;
+    color: #ffffff;
+    padding: 3px 5px;
+    letter-spacing: -0.1em;
+    margin-top: -6px;
+    margin-left: -6px;
+}
+
+/*Скрывает текст*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/*Хочу сюда!*/
+.want-here {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: #756157;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 9px 15px 9px 15px;
+    width: 130px;
+    border-radius: 4px;
+    border: 0;
+}
+
+.button-click-brown:hover {
+    background-color: #615048;
+}
+
+.button-click-brown:active {
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-click-brown:disabled {
+    background: #E5E5E5;
+    color: #ffffff;
+}
+
+/*Welcome на картинке*/
+.main-container {
+    flex-grow: 1;
+}
+
+.welcome {
+    position: relative;
+    background-image: url("../images/photo/index-background.jpg");
+    background-size: cover;
+    padding-top: 51px;
+    padding-bottom: 82px;
+    background-repeat: no-repeat;
+}
+
+/*декоративный элемент*/
+.welcome::after {
+    position: absolute;
+    background-image: url("../images/index-background-decoration.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+}
+
+/*подчеркивание Главная*/
+.navigation-link-current::before {
+    position: absolute;
+    right: 20px;
+    bottom: -7px;
+    left: 239px;
+    background-color: #756157;
+    content: "";
+    width: 68px;
+    padding-bottom: 10px;
+    height: 4px;
+}
+
+/*Текст под картинкой*/
+.sedona-small-town {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 63px;
+    margin-bottom: 31px;
+    background-image: url("../images/index-background-decoration.svg");
+}
+
+.five-reasons {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 90px;
+}
+
+.advantage-item-city-bridge {
+    background-color: #82B3D3;
+    width: 400px;
+    height: 384px;
+}
+
+.advantage-item-home-souvenir-square-tourist {
+    background-color: rgba(131, 179, 211, 0.12);
+    width: 400px;
+    height: 384px;
+}
+
+.advantage-item-road {
+    background-color: rgba(131, 179, 211, 0.2);
+    width: 400px;
+    height: 384px;
+}
+
+.advantage-item {
+    background-color: rgba(131, 179, 211, 0.2);
+    width: 400px;
+    height: 384px;
+}
+
+/* №1 и №2*/
+.advantage-list {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    padding: 0;
+    color: #ffffff;
+}
+
+.advantage-title-white {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 400px;
+    margin-top: 92px;
+    margin-bottom: 30px;
+}
+
+.advantage-description-number-white {
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.advantage-description-text-white {
+    color: #ffffff;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 92px;
+}
+
+.advantage-photo-flag {
+    background-image: url("../images/photo/flags.jpg");
+    width: 800px;
+    height: 384px;
+}
+
+.advantage-photo-bridge {
+    background-image: url("../images/photo/devile-bridge.jpg");
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Дом, бургер, сувениры*/
+.icons {
+    margin-top: 81px;
+    margin-bottom: 30px;
+}
+
+.advantage-title-black {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #333333;
+    text-transform: uppercase;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.advantage-description-text-black {
+    color: #333333;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+/*№ 3 4 5 */
+.advantage-description-number-black {
+    color: #333333;
+    text-transform: uppercase;
+    width: 400px;
+}
+
+/*преимущества 3 4 и 5*/
+.advantage-title-black-end {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #333333;
+    text-transform: uppercase;
+    width: 400px;
+    margin-top: 103px;
+    margin-bottom: 30px;
+}
+
+/*текст преимуществ 3 4 и 5 */
+.advantage-description-text-black-end {
+    color: #333333;
+    width: 400px;
+    margin-top: 0;
+    margin-bottom: 102px;
+}
+
+/*Высота для двух фото*/
+.photo-main {
+    height: 384px;
+}
+
+/* Гостиницы в Седоне */
+.hotel-search {
+    display: grid;
+    justify-content: center;
+}
+
+.hotel-search-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 91px;
+    margin-bottom: 29px;
+}
+
+.hotel-search-text {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 56px;
+}
+
+/*кнопка поиск гостиницы*/
+.button-hotel-search-in-sedona {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    background-color: #756157;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 15px 12px 15px;
+    margin-top: 0;
+    margin-bottom: 93px;
+    width: 544px;
+    border-radius: 4px;
+}
+
+/* Рассылка */
+/*фон*/
+.subscribe-to-newsletter {
+    display: grid;
+    background-image: url("../images/photo/background-index.jpg");
+    height: 411px;
+}
+
+/*Подпишитесь*/
+.subscribe-to-newsletter-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: 94px;
+    margin-bottom: 29px;
+}
+
+/*текст*/
+.subscribe-to-newsletter-text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 46px;
+}
+
+.button {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    background-color: #82B3D3;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 94px;
+}
+
+/*Footer*/
+.page-footer-container {
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+/*Соц сети*/
+.footer-social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    padding-left: 70px;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 40px;
+}
+
+.social-media {
+    fill: #83B3D3;
+}
+
+.social-media:hover {
+    fill: #68A2CA;
+}
+
+.social-media:focus {
+    fill: #68A2CA;
+}
+
+.social-media:active {
+    fill: rgba(104, 162, 202, 0.3);
+}
+
+/*Телефон*/
+.contacts-telefon {
+    display: flex;
+    margin-left: 240px;
+    margin-top: 40px;
+    width: 331px;
+    margin-right: 247px;
+    font-size: 40px;
+    line-height: 40px;
+    fill: #333333;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.contacts-telefon:hover {
+    fill: #756157;
+}
+
+.contacts-telefon:focus {
+    fill: #756157;
+}
+
+.contacts-telefon:active {
+    fill: rgba(117, 97, 87, 0.3);
+}
+
+/*Логотип*/
+.logo-htmlacademy {
+    display: flex;
+    margin-right: 72px;
+    margin-left: auto;
+    margin-top: 40px;
+    fill: #333333;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.logo-htmlacademy:hover {
+    fill: #756157;
+}
+
+.logo-htmlacademy:focus {
+    fill: #756157;
+}
+
+.logo-htmlacademy:active {
+    fill: rgba(117, 97, 87, 0.3);
+}
+
+/*Страница catalog*/
+.main-inner-photo {
+    background-image: url("../images/photo/background-catalog.jpg");
+    height: 393px;
+}
+
+.inner-header {
+    margin: 0;
+    padding: 0;
+}
+
+/*заголовок на картинке Гостиницы Седоны*/
+.inner-header-title {
+    display: flex;
+    width: 493px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 78px;
+    color: #ffffff;
+    padding-top: 35px;
+    padding-bottom: 0;
+    padding-left: 70px;
+    margin-bottom: 0;
+    margin: 0;
+}
+
+/*хлебные крошки*/
+.breadcrumbs {
+    display: flex;
+}
+
+/*1/ иконка дома*/
+.icons-catalog {
+    margin-left: 72px;
+    margin-right: 10px;
+}
+
+.navigation-arrow {
+    margin-right: 10px;
+}
+
+/*2/ Гостиницы*/
+.breadcrumbs-link {
+    font-size: 16px;
+    color: #ffffff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/*Общий блок от Инфраструктура до Сбросить*/
+.catalog-filter-block {
+    display: flex;
+    width: 1060px;
+    height: 149px;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+/* Блок Инфраструктура и Тип жилья*/
+.block-infrastructure-type-housing {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 177px;
+    width: 366px;
+    border: none;
+}
+
+/*Инфраструктура*/
+.catalog-filter-infrastructure {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 151px;
+    height: 149px;
+
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 70px;
+}
+
+/*Тип жилья*/
+.catalog-filter-type-housing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 146px;
+    height: 149px;
+    margin-right: auto;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+/*квадрат и круги*/
+.catalog-filter-list {
+    text-align: left;
+}
+
+
+.catalog-filter-item:last-child {
+    padding-bottom: 70px;
+}
+
+.catalog-filter-item-parking-motel {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*перечисление списка*/
+.control {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/*Блок Стоимость, Применить, Сбросить*/
+
+/*Стоимость*/
+.catalog-filter-price {
+    background: transparent;
+    height: 148px;
+}
+
+.catalog-filter-group {
+    margin: 0;
+    margin-right: 70px;
+    padding: 0;
+    border: none;
+}
+
+/*Заголовок Инфраструктура, Тип Жилья, Стоимость*/
+.catalog-filter-title {
+    font-size: 20px;
+    padding: 0;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    width: 287px;
+    margin-top: 4px;
+}
+
+/* Выбор цены */
+.range-scale {
+    position: relative;
+    height: 4px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+    top: -8px;
+    left: 0;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -10px;
+}
+
+.catalog-filter-label {
+    display: flex;
+    height: 48px;
+    position: relative;
+}
+
+.range-input {
+    width: 100%;
+    padding: 0;
+    font: inherit;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+
+/*до*/
+.input-left {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 1px solid #ffffff;
+    padding-left: 19px;
+    padding-right: 19px;
+    background-image: url("../images/icons/icon-price-from.svg");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+}
+
+/*после*/
+.input-right {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left: 1px solid #ffffff;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-image: url("../images/icons/icon-price-to.svg");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+}
+
+.range-input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.input-left:focus,
+.input-right:focus {
+    outline: 3px solid #81B3D2;
+    box-shadow: 0 0 0 3px #81B3D2 inset;
+}
+
+.range-input:active {
+    background-color: #756257;
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #ffffff;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.range-input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*блок применить и сбросить*/
+.catalog-filter-group-submit-reset {
+    border: none;
+}
+
+/*блок применить и сбросить*/
+.submit-reset {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/*Кнопка Применить*/
+.button-submit-catalog {
+    display: flex;
+    font-weight: 700;
+    background-color: #82B3D3;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    width: 130px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 15px 14px 15px;
+    margin-top: 52px;
+    margin-bottom: 20px;
+    margin-right: 86px;
+}
+
+/*Кнопка Сбросить*/
+.button-reset {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    margin-right: 86px;
+}
+
+/*Найдено гостиниц, сортировка и вид*/
+.catalog {
+    display: flex;
+    margin-top: 50px;
+    padding: 0;
+    text-transform: uppercase;
+    background-position: center;
+    text-align: start;
+}
+
+.found-hotels-main {
+    display: flex;
+    width: 1200px;
+    height: 48px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+
+}
+
+/* Найдено гостиниц */
+.found-hotels {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-left: 72px;
+    margin-right: 191px;
+    margin-bottom: 56px;
+    margin-top: 0;
+    width: 338px;
+    color: #000000;
+    height: 37px;
+}
+
+/*Сортировка гостиниц*/
+.select-control {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: #333333;
+    margin-right: 78px;
+    padding: 14px 43px 14px 20px;
+    width: 225px;
+    height: 48px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    font-family: inherit;
+    margin-bottom: 56px;
+    appearance: none;
+    background-image: url("../images/icons/icon-arrow-rotation.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px top 20px;
+    cursor: pointer;
+}
+
+.select-control:hover {
+    border: 2px solid #68A2CA;
+}
+
+.select-control:focus {
+    border: 2px solid #68A2CA;
+}
+
+.select-control:active {
+    border: 2px solid #3F5E72;
+}
+
+/*Сортировка по*/
+.card-grid {
+    display: flex;
+    width: 166px;
+    height: 48px;
+    border-radius: 4px;
+    margin-bottom: 56px;
+    justify-content: space-between;
+    margin-left: 78px;
+}
+
+.card-grid-toggle-view-card {
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 56px;
+    border: 2px solid #000000;
+    width: 48px;
+    height: 48px;
+    background-image: url("../images/icons/icon-view-card.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.card-grid-toggle-view-big {
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 56px;
+    border: 2px solid #E5E5E5;
+    width: 48px;
+    height: 48px;
+    background-image: url("../images/icons/icon-view-big.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.card-grid-toggle-view-list {
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 56px;
+    border: 2px solid #E5E5E5;
+    width: 48px;
+    height: 48px;
+    background-image: url("../images/icons/icon-view-list.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.card-grid-toggle-view-card:hover {
+    border: 2px solid #000000;
+}
+
+.card-grid-toggle-view-card:focus {
+    border: 2px solid #68A2CA;
+    outline: none;
+}
+
+.card-grid-toggle-view-card:active {
+    border: 2px solid #000000;
+}
+
+.card-grid-toggle-view-big:hover {
+    border: 2px solid #000000;
+}
+
+.card-grid-toggle-view-big:focus {
+    border: 2px solid #68A2CA;
+    outline: none;
+}
+
+.card-grid-toggle-view-big:active {
+    border: 2px solid #000000;
+}
+
+.card-grid-toggle-view-list:hover {
+    border: 2px solid #000000;
+}
+
+.card-grid-toggle-view-list:focus {
+    border: 2px solid #68A2CA;
+    outline: none;
+}
+
+.card-grid-toggle-view-list:active {
+    border: 2px solid #000000;
+}
+
+/*Результаты сортировки*/
+.product-catalog {
+    display: flex;
+    width: 1056px;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*Настройки списка div */
+.product-catalog {
+    width: 1056px;
+
+}
+
+/*Настройки списка ul*/
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 18px;
+    margin-bottom: 66px;
+}
+
+/*Настройки списка li*/
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+}
+
+/*фотографии отелей*/
+.hotel-photo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*Заголовок гостиниц */
+.product-card-link {
+    text-decoration: none;
+}
+
+.product-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: none;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: left;
+    width: 300px;
+    margin-left: 20px;
+}
+
+/*Гостиница*/
+.type-of-housing {
+    display: flex;
+    margin-left: 20px;
+}
+
+/*цена от*/
+.type-of-price {
+    display: flex;
+    margin-left: 84px;
+}
+
+.more-and-favorites-button {
+    display: flex;
+    cursor: pointer;
+}
+
+.stars-and-rating {
+    display: flex;
+}
+
+/*Подробнее*/
+.product-card-button-more {
+    display: flex;
+    font-weight: 700;
+    background-color: #756157;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px 9px 15px;
+}
+
+/*Избранное*/
+.product-card-button-favorites {
+    display: flex;
+    font-weight: 700;
+    background-color: #82B3D3;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px 9px 15px;
+}
+
+.button-favorites {
+    background-color: #7DB54F;
+}
+
+/*звезды*/
+.prodact-card-image {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+/*Рейтинг*/
+.rating {
+    display: flex;
+    background-color: #F2F2F2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-left: 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 19px 9px 20px;
+}
+
+.rating-favorites {
+    display: flex;
+    background-color: #F2F2F2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-left: 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 22px 9px 22px;
+}
+
+/*Нумерация внизу и Гостиниц на странице (общий)*/
+.page-number {
+    display: flex;
+    width: 1056px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Нумерация*/
+.pagination {
+    display: flex;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+/*Остальные страницы*/
+.pagination-link {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 12px;
+    width: 55px;
+    height: 55px;
+    line-height: 36px;
+    font-weight: 700;
+    background-color: #82B3D3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*Текущая страница 1*/
+.pagination-current {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 12px;
+    width: 55px;
+    height: 55px;
+    line-height: 36px;
+    font-weight: 700;
+    background-color: #F2F2F2;
+    color: #333333;
+    text-decoration: none;
+}
+
+/*блок гостниц + список*/
+.hotel-general {
+    display: flex;
+    width: 386px;
+}
+
+/*Гостиниц на странице*/
+.hotel-number {
+    margin-right: 51px;
+}
+
+/*Выпадающий список*/
+.select-number-hotel-on-page {
+    display: flex;
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none;
+    text-transform: none;
+    width: 160px;
+    height: 48px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    appearance: none;
+    background-image: url("../images/icons/icon-arrow-rotation.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px top 20px;
+    cursor: pointer;
+    padding: 14px 43px 14px 20px;
+}
+
+.select-number-hotel-on-page:hover {
+    border: 2px solid #68A2CA;
+}
+
+.select-number-hotel-on-page :focus {
+    border: 2px solid #68A2CA;
+}
+
+.select-number-hotel-on-page:active {
+    border: 2px solid #3F5E72;
+}
+
+/*блок с подпиской каталога*/
+.subscribe-to-newsletter-catalog {
+    display: flex;
+    flex-direction: column;
+    height: 411px;
+    align-items: center;
+}
+
+/*Подпишитесь на рассылку*/
+.subscribe-to-newsletter-title-catalog {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #333333;
+    text-transform: uppercase;
+    margin-top: 94px;
+    margin-bottom: 29px;
+}
+
+.subscribe-to-newsletter-text-catalog {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 46px;
+}
+
+/*Ваш email*/
+.field {
+    display: grid;
+    gap: 0;
+    margin-left: 200px;
+    width: 600px;
+    height: 58px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    background: #F2F2F2;
+    padding-left: 22px;
+    font: inherit;
+    font-size: 18px;
+}
+
+/*Подписаться*/
+.field-submit {
+    display: grid;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    border: 0;
+    padding: 12px 15px 12px 15px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+.button-submit {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    background-color: #82B3D3;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 94px;
+}
+
+.email-form {
+    display: flex;
+    margin-right: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.email-form-catalog {
+    display: flex;
+    margin-right: 200px;
+    border-radius: 0 10px 10px 0;
+}
+
+.button-click-blue:hover {
+    background-color: #68A2CA;
+}
+
+.button-click-blue:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-click-blue:disabled {
+    background-color: #E5E5E5;
+    color: #ffffff;
+}
+
+/*Общий popover*/
+.popover {
+    position: absolute;
+    top: 11.95%;
+    right: 22.11%;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 715px;
+    padding: 62px 70px 70px 68px;
+    font-family: "PT Sans", sans-serif;
+    color: #242424;
+    background-color: #ffffff;
+    min-height: 400px;
+    box-shadow: 0 25px 50 rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+/*Заголовок*/
+.popover-title {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 413px;
+}
+
+/*Кнопка закрыть*/
+.popover-close-button {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    background: #F2F2F2;
+    border-radius: 50%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*убирает стрелки вверх/вниз в полях*/
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+/* Квадрат*/
+.control {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+}
+
+.control-mark {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.control-mark-wifi {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/*добавление галочек*/
+.control-mark::before {
+    background-image: url("../images/check-mark.svg");
+    background-color: transparent;
+}
+
+.control-mark::after {
+    background-image: url("../images/check-mark.svg");
+    background-color: transparent;
+}
+
+.control-mark-wifi::before {
+    background-image: url("../images/check-mark.svg");
+}
+
+.control-mark-wifi::after {
+    background-image: url("../images/check-mark.svg");
+}
+
+/*изменение состояний hover*/
+.control-mark:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-mark-wifi:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*изменение состояний focus*/
+.control-input:focus + .control-mark {
+    outline: 3px solid #83B3D3;
+}
+
+.control-input:focus + .control-mark-wifi {
+    outline: 3px solid #83B3D3;
+}
+
+/*изменение состояний active*/
+.control-mark:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-mark-wifi:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*клик и появление выбора*/
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 12px;
+    height: 10px;
+    content: "";
+}
+
+/*клик и появление выбора wifi*/
+.control-input[type="checkbox"]:checked + .control-mark-wifi::before,
+.control-input[type="checkbox"]:checked + .control-mark-wifi::after {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 12px;
+    height: 10px;
+    content: "";
+}
+
+/* Круг*/
+.control-circle {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+}
+
+.control-mark-circle {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.control-mark-circle-motel-apartments {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/*добавление круга*/
+.control-mark-circle::before {
+    background-image: url("../images/ellipse.svg");
+    background-repeat: no-repeat;
+}
+
+.control-mark-circle::after {
+    background-image: url("../images/ellipse.svg");
+    background-repeat: no-repeat;
+}
+
+.control-mark-circle-motel-apartments::before {
+    background-image: url("../images/ellipse.svg");
+    background-repeat: no-repeat;
+}
+
+.control-mark-circle-motel-apartments::after {
+    background-image: url("../images/ellipse.svg");
+    background-repeat: no-repeat;
+}
+
+/*изменение состояния hover*/
+.control-mark-circle:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-mark-circle-motel-apartments:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*изменение состояния focus*/
+.control-input:focus + .control-mark-circle {
+    outline: 3px solid #83B3D3;
+}
+
+.control-input:focus + .control-mark-circle-motel-apartments {
+    outline: 3px solid #83B3D3;
+}
+
+/*изменение состояния active*/
+.control-mark-circle:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-mark-circle-motel-apartments:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*клик и появление выбора (круг)*/
+.control-input[type="checkbox"]:checked + .control-mark-circle::before,
+.control-input[type="checkbox"]:checked + .control-mark-circle::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 11px;
+    height: 10px;
+    content: "";
+    align-items: center;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark-circle-motel-apartments::before,
+.control-input[type="checkbox"]:checked + .control-mark-circle-motel-apartments::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 11px;
+    height: 10px;
+    content: "";
+    align-items: center;
+}
+
+/*Модальное окно*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+/* Модальное окно */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+    z-index: 2;
+}
+
+.modal-container-close {
+    display: none;
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    padding: 70px;
+    padding-top: 64px;
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.modal-booking {
+    width: 575px;
+}
+
+.modal-close-button {
+    position: absolute;
+    padding: 0;
+    top: 54px;
+    right: 70px;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.modal-close-cross {
+    fill: #000000;
+
+}
+
+.modal-close-button:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active,
+.modal-close-button:active .modal-close-cross {
+    background-color: #E6E6E6;
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    margin: 0;
+    margin-bottom: 63px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.field-group,
+.people-counter-form-field {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.date-from,
+.date-to,
+.people-counter-adult,
+.people-counter-children {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.date-form-field {
+    padding: 0 19px;
+    background-image: url("../images/icons/modal-icon-date.svg");
+    background-repeat: no-repeat;
+    background-position: right 17px center;
+}
+
+.people-counter-adult {
+    margin-right: 64px;
+    position: relative;
+}
+
+.people-counter-children {
+    padding-right: 43px;
+    width: 54px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.people-counter-button {
+    position: absolute;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-counter-icon {
+    display: block;
+    margin: 0 auto;
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.people-counter-button:hover .modal-counter-icon {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.people-counter-button:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 3px #83B3D3;
+}
+
+.people-counter-button:focus .modal-counter-icon {
+    fill: #000000;
+}
+
+.people-counter-button:active .modal-counter-icon {
+    fill: rgba(0, 0, 0, 0.2);
+}
+
+.minus-adults {
+    bottom: 12px;
+    left: 163px;
+    z-index: 1;
+}
+
+.plus-adults {
+    bottom: 12px;
+    left: 253px;
+    z-index: 1;
+}
+
+.minus-children {
+    bottom: 12px;
+    left: 450px;
+    z-index: 1;
+}
+
+.plus-children {
+    bottom: 12px;
+    left: 540px;
+    z-index: 1;
+}
+
+.date-form-field,
+.people-counter-form-field {
+    width: 382px;
+    min-height: 50px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    font: inherit;
+    color: #000000;
+    appearance: none;
+}
+
+.people-counter-form-field:nth-of-type(1) {
+    margin-right: 56px;
+}
+
+.date-form-field:hover {
+    background-color: #E6E6E6;
+}
+
+.date-form-field:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.date-form-field:active {
+    background-color: #ffffff;
+    outline: 2px solid #000000;
+}
+
+.date-form-field::placeholder,
+.people-counter-form-field::placeholder {
+    color: #000000;
+}
+
+.people-counter-form-field::-webkit-outer-spin-button,
+.people-counter-form-field::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.people-counter-form-field[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.people-counter-form-field {
+    width: 133px;
+    text-align: center;
+}
+
+.modal-message-warning,
+.modal-message {
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    width: 420px;
+    margin-left: auto;
+    min-height: 29px;
+    align-items: flex-end;
+    margin-bottom: 11px;
+}
+
+.modal-message-warning {
+    color: rgba(255, 87, 87, 1);
+}
+
+.modal-search-button {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #83B3D3;
+    width: 100%;
+    height: 60px;
+    padding: 12px 0 12px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.modal-search-button:hover {
+    background-color: #68A2CA;
+}
+
+.modal-search-button:focus {
+    outline: 3px solid #756257;
+}
+
+.modal-search-button:active {
+    outline: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* tooltip */
+
+.tooltip-toggle {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    top: 12px;
+    right: 18px;
+    display: block;
+    position: absolute;
+}
+
+.tooltip-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #83B3D3;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+    fill: #68A2CA;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-transform: none;
+    padding: 15px 18px 18px 22px;
+    width: 216px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    left: -62px;
+    z-index: 1;
+    display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+    display: block;
+}
+
+.tooltip-text:after {
+    content: '';
+    background-image: url("../images/icons/tooltip-arrow.svg");
+    width: 19px;
+    height: 9px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.decorative-strip {
+    margin-bottom: 30px;
+}
