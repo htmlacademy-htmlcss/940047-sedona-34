@@ -1368,51 +1368,6 @@ body {
     color: #ffffff;
 }
 
-/*Общий popover*/
-.popover {
-    position: absolute;
-    top: 11.95%;
-    right: 22.11%;
-    z-index: 1;
-    box-sizing: border-box;
-    width: 715px;
-    padding: 62px 70px 70px 68px;
-    font-family: "PT Sans", sans-serif;
-    color: #242424;
-    background-color: #ffffff;
-    min-height: 400px;
-    box-shadow: 0 25px 50 rgba(0, 0, 0, 0.15);
-    border-radius: 30px;
-    text-transform: uppercase;
-}
-
-/*Заголовок*/
-.popover-title {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    width: 413px;
-}
-
-/*Кнопка закрыть*/
-.popover-close-button {
-    position: absolute;
-    width: 53px;
-    height: 53px;
-    background: #F2F2F2;
-    border-radius: 50%;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-/*убирает стрелки вверх/вниз в полях*/
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
-}
-
 /* Квадрат*/
 .control {
     position: relative;
