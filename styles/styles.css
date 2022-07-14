@@ -1397,7 +1397,7 @@ body {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
-    color: #333333;
+    color: #000000;
     text-transform: uppercase;
     margin-top: 94px;
     margin-bottom: 29px;
@@ -1416,19 +1416,39 @@ body {
 .field {
     display: grid;
     gap: 0;
-    width: 600px;
+    width: 578px;
     height: 58px;
     border-radius: 10px 0 0 10px;
     border: none;
-    background: #F2F2F2;
+    background-color: #F2F2F2;
     padding-left: 22px;
     font: inherit;
     font-size: 18px;
+    cursor: pointer;
+}
+
+.field:hover {
+    background-color: #E6E6E6;
+}
+
+.field:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.field:active {
+    background-color: #FFFFFF;
+    outline: 2px solid #000000;
+    border-radius: 4px;
+    color: #000000;
 }
 
 .form-label-email {
     width: 600px;
+    height: 60px;
 }
+
 
 /*Подписаться*/
 .button-submit {
